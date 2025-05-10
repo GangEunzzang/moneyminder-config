@@ -3,17 +3,17 @@ spring:
     web-application-type: reactive
   cloud:
     gateway:
+      default-filters:
+        - name: GlobalAuthFilter
       routes:
         - id: account-book-service
-          uri: lb://account-book-service
+          uri: lb://ACCOUNT-BOOK-SERVICE
           predicates:
             - Path=/account-book/**
         - id: user-service
-          uri: lb://user-service
+          uri: lb://USER-SERVICE
           predicates:
             - Path=/user/**
-      default-filters:
-        - name: GlobalAuthFilter
 eureka:
   instance:
     prefer-ip-address: true
