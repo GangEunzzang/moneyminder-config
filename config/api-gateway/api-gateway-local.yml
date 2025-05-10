@@ -13,7 +13,7 @@ spring:
           predicates:
             - Path=/user/**
       default-filters:
-           - name : GlobalAuthFilter
+        - name: GlobalAuthFilter
 eureka:
   instance:
     prefer-ip-address: true
