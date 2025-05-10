@@ -10,10 +10,15 @@ spring:
           uri: lb://ACCOUNT-BOOK-SERVICE
           predicates:
             - Path=/account-book/**
+          filters:
+            - StripPrefix=1
+
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/user/**
+          filters:
+            - StripPrefix=1
 eureka:
   instance:
     prefer-ip-address: true
