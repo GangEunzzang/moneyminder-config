@@ -13,7 +13,9 @@ spring:
           auth: true
           starttls:
             enable: true
-            required: true
+  cloud:
+    refresh:
+      extra-refreshable: com.zaxxer.hikari.HikariDataSource
 
 management:
   endpoints:

@@ -17,6 +17,7 @@ eureka:
     # 'random.value를 활용하여 랜덤 값을 생성해 각 인스턴스를 고유하게 식별
     instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
 
+
 management:
   endpoints:
     web:
