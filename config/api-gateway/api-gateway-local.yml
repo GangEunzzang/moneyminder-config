@@ -1,3 +1,6 @@
+server:
+  port: 9002 
+
 spring:
   main:
     web-application-type: reactive
@@ -19,6 +22,8 @@ spring:
             - Path=/user/**
           filters:
             - StripPrefix=1
+    refresh:
+      extra-refreshable: com.zaxxer.hikari.HikariDataSource
 eureka:
   instance:
     prefer-ip-address: true
